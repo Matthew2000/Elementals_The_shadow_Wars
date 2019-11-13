@@ -160,7 +160,7 @@ if not NCURSES:
     PDC_KEY_F0       =  0x108  # function keys; 64 reserved 
     PDC_KEY_DL       =  0x148  # delete line 
     PDC_KEY_IL       =  0x149  # insert line 
-    PDC_KEY_DC       =  0x14a  # delete character 
+    PDC_KEY_DC       =  0x14a  # delete character_classes
     PDC_KEY_IC       =  0x14b  # insert char or enter ins mode 
     PDC_KEY_EIC      =  0x14c  # exit insert char mode 
     PDC_KEY_CLEAR    =  0x14d  # clear screen 
@@ -338,7 +338,7 @@ else:
     COLOR_WHITE = 7
 
 
-# Get a C character
+# Get a C character_classes
 def CCHAR(ch):
     if type(ch)==str:
         return ord(ch)
@@ -347,7 +347,7 @@ def CCHAR(ch):
     else:
         raise Exception("CCHAR: can't parse a non-char/non-int value.")
 
-# Alternate character set
+# Alternate character_classes set
 def ALTCHAR(ch):
     if type(ch)==str:
         return ord(ch) | A_ALTCHARSET
